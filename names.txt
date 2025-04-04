@@ -4,6 +4,7 @@
 *César Alejandro Torrealba
 *Allan Erlang Videbæk
 *Per Jensen
+Carl Christian Bach
 Kawus Nouri
 Keld Ølykke
 Max la Cour Christensen
@@ -13,7 +14,6 @@ Martijn Berger
 Mikkel Tanderup
 Daniela Sa
 Lars Thinggaard
-Very Special Guest
 Distinguished Engineer
 Extinguished Engineer
 Intern/Extern
