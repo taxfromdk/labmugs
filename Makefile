@@ -3,4 +3,4 @@ all: mug.svg logo.png
 	python3 render_mugs.py
 
 clean:
-	rm -rf out
+	rm -rf out/*.png out/*.pdf
