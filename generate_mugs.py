@@ -28,18 +28,12 @@ def read_names(names_path):
         # Strip whitespace and filter out empty lines
         return [line.strip() for line in file if line.strip()]
 
-def generate_mug_svg(template, name, output_path, veogo, removebg):
+def generate_mug_svg(template, name, output_path, veogo):
     """Generate a personalized mug by replacing the placeholder with a name."""
     template = re.sub(r'EMPLOYEENAME', f'{name}', template)
     
     template = template.split("[[[VEOGO]]]")
     if not veogo:
-        template = template[0] + template[2]
-    else:
-        template = "".join(template)
-
-    template = template.split("[[[BACKGROUND]]]")
-    if removebg:
         template = template[0] + template[2]
     else:
         template = "".join(template)
@@ -60,7 +54,6 @@ def convert_svg_to_fmt(svg_path, out_path):
         text=True,
         check=True
     )
-
     return True
 
 
@@ -96,7 +89,7 @@ def main():
             
         
         svg_file = Path(outfolder) / f"mug_{i:02d}_{safe_name}.svg"
-        generate_mug_svg(template, name, svg_file, veogo, False)
+        generate_mug_svg(template, name, svg_file, veogo)
         
         
         #png_file = str(svg_file).replace('mug', 'proof').replace('.svg', '.png')
